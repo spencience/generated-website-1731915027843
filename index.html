@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                        <title>Home</title>
+                        <script src="https://cdn.tailwindcss.com"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js"></script>
+                    </head>
+                    <body class="bg-white">
+                        <main class="max-w-7xl mx-auto p-4 md:p-6 lg:p-8">
+  <section class="bg-blue-500 p-8 rounded-lg shadow-md mb-12 text-white flex flex-col justify-center items-center">
+    <h1 class="text-4xl font-bold leading-tight text-center mb-4">Snake Game with Phaser</h1>
+    <p class="text-lg text-center mb-8">Built with the latest Phaser framework, this snake game is a fun and interactive way to pass the time.</p>
+    <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded flex items-center gap-2" onclick="toggleGame()">Start Playing</button>
+  </section>
+  
+  <section class="md:flex md:flex-wrap -mx-4">
+    <div class="w-full md:w-1/2 xl:w-1/3 px-4 mb-8">
+      <div class="bg-gray-100 p-8 rounded-lg shadow-md">
+        <h2 class="text-lg font-semibold text-center mb-4">How to Play</h2>
+        <p class="text-sm text-center mb-8">Use the arrow keys to control the snake, eat food pellets to grow longer and avoid colliding with the walls or the snake's tail.</p>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center gap-2" onclick="toggleTutorial()">Show Tutorial</button>
+      </div>
+    </div>
+    
+    <div class="w-full md:w-1/2 xl:w-1/3 px-4 mb-8">
+      <div class="bg-gray-100 p-8 rounded-lg shadow-md">
+        <h2 class="text-lg font-semibold text-center mb-4">Game Features</h2>
+        <ul class="list-none mb-8 text-sm text-center">
+          <li class="mb-2">Phaser framework</li>
+          <li class="mb-2">Easy to play</li>
+          <li class="mb-2">Increasing difficulty</li>
+        </ul>
+        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded flex items-center gap-2" onclick="openLeaderboard()">View Leaderboard</button>
+      </div>
+    </div>
+    
+    <div class="w-full md:w-1/2 xl:w-1/3 px-4 mb-8">
+      <div class="bg-gray-100 p-8 rounded-lg shadow-md">
+        <h2 class="text-lg font-semibold text-center mb-4">Game Stats</h2>
+        <p class="text-sm text-center mb-8">Play the game to unlock your own personal stats, including your highest score and longest play time.</p>
+        <button class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded flex items-center gap-2" onclick="openStats()">View Stats</button>
+      </div>
+    </div>
+  </section>
+  
+  <div id="game-container" class="hidden mt-4 p-4 bg-gray-100 rounded shadow-inner transition-all duration-300 opacity-0 transform -translate-y-2">
+    <div class="prose">
+      <h3 class="text-lg font-semibold mb-2">Game Started</h3>
+      <div id="phaser-game" class="w-full h-screen"></div>
+    </div>
+  </div>
+</main>
+                    </body>
+                    </html>
